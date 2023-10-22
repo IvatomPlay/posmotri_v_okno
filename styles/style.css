@@ -9,7 +9,7 @@ html {
 }
 
 .page {
-  display: flex;
+  display: grid;
   inline-size: 1200px;
   block-size: 100%;
   margin: auto;
@@ -178,7 +178,11 @@ a {
   margin: 1px auto;
 }
 
-.search-form__label-text:focus-visible {
+.search-form__label:focus {
+  outline: none;
+}
+
+.search-form__label:has(:focus-visible) {
   outline: 1px solid #fff;
   outline-offset: 2px;
 }
